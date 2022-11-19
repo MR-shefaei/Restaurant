@@ -1,4 +1,4 @@
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+
 
 const navigation = {
   solutions: [
@@ -28,7 +28,7 @@ const navigation = {
 
 export default function Footer() {
   return (
-    <footer className="bg-white " aria-labelledby="footer-heading">
+    <div className="bg-white  " aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
@@ -92,6 +92,6 @@ export default function Footer() {
         
       
       </div>
-    </footer>
+    </div>
   )
 }

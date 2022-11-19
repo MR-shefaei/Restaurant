@@ -1,24 +1,18 @@
-import React, { useEffect } from "react";
-import { API_URL } from "../config";
+import React from "react";
 
+export default function Content({ category }) {
 
-export default function Content({category}) {
-    console.log("tttttttttttt",category);
-  // useEffect(async () => {
-  //   const categories = await fetch(`${API_URL}/api/categories`);
-  //   const response = await categories.json();
-  //   console.log(response);
-  // });
+  console.log(category);
   return (
     <>
-      <div className="grid grid-cols-7 container mx-auto">
+      <div className="grid grid-cols-7 container mx-auto h-[75%] pt-10">
         <div className="col-span-2">
           <div className="">
             <h2 className="font-bold pb-5">Categories</h2>
             <ul className="">
-              {/* {response.map((item) => {
-                <li>{item}</li>;
-              })} */}
+              {category?.data?.map((item) => (
+                <li key={item.id}>{item.attributes.name}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -27,4 +21,3 @@ export default function Content({category}) {
     </>
   );
 }
-

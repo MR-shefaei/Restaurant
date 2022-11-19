@@ -1,10 +1,7 @@
-
-import Footer from '../components/footer';
 import { API_URL } from '../config';
 import Content from '../components/content';
 
 export default function Home({category}) {
-  console.log("............",category)
   return (
    <>
     <Content category={category}/>

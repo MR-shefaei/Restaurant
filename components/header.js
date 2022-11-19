@@ -3,14 +3,13 @@ import { useState } from "react";
 export default function Header() {
   const [useStyle, setStyle] = useState(1);
 
-  function eventHandler(e) {
-    
+  function eventHandler(e) {   
     setStyle(e);
   }
 
   return (
     <>
-      <div className="bg-[#FFFCFA] flex justify-center  p-8   font-semibold ">
+      <div className="bg-[#FFFCFA] flex justify-center  p-8  font-semibold ">
         <a
           onClick={() => eventHandler(1)}
           className={`mx-28  text-gray-300 ${
