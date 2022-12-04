@@ -1,12 +1,15 @@
 import React from "react";
+import Image from "next/image";
 
-export default function Content({ category, neighborhood }) {
+
+export default function Content({ category, neighborhood, restaurant }) {
   console.log(neighborhood);
   console.log(category);
+  console.log(restaurant);
   return (
     <>
-      <div className="grid grid-cols-7 container mx-auto h-[75%] pt-10">
-        <div className="col-span-2">
+      <div className="grid grid-cols-4 container mx-auto pt-10">
+        <div className="col-span-1">
           <div className="">
             <h2 className="font-bold pb-5">Categories</h2>
             <ul className="">
@@ -30,7 +33,26 @@ export default function Content({ category, neighborhood }) {
             </ul>
           </div>
         </div>
-        <div className="col-span-5">content</div>
+        <div className="col-span-3">
+          <h2 className="font-semibold ">The best restaurant in French</h2>
+          <div className="grid grid-cols-3 gap-8">
+            {category&&restaurant.data.map((item) => (
+              
+                <div class="max-w-sm rounded p-4 overflow-hidden shadow-lg">
+                <img className="w-full " src={`http://localhost:1337${item.attributes.image.data[0].attributes.url}`} alt="Sunset in the mountains" />
+                <div class="px-6 py-4">
+                  <div class="font-bold text-xl mb-2">{item.attributes.name}</div>
+                  <p class="text-gray-700 text-base">
+                    {item.attributes.description}
+                  </p>
+                </div>
+              
+              </div>
+              
+            ))}
+
+          </div>
+        </div>
       </div>
     </>
   );
