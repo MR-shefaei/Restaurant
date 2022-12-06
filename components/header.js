@@ -1,17 +1,5 @@
 import Link from "next/link";
 import { useState } from "react";
-import AboutUs from "./aboutus";
-
-const nav =[
-  {
-    name:"Restaurants",
-    href:"/"
-  },
-  {
-    name:"AboutUs",
-    href:"/about"
-  }
-]
 
 export default function Header() {
 
@@ -38,7 +26,7 @@ export default function Header() {
             Restaurant
           </a>
         </Link>
-        <Link href="/about.js">
+        <Link href="/about">
           <a
             onClick={() => eventHandler(2)}
 
