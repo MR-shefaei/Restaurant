@@ -1,6 +1,7 @@
 import { API_URL } from '../config';
 import Content from '../components/content';
 
+
 export default function Home({category , neighborhood , restaurant}) {
   return (
    <>

@@ -18,8 +18,8 @@ export default function Header() {
           <a
             onClick={() => eventHandler(1)}
             className={`mx-28  text-gray-300 ${useStyle === 1
-                ? "  underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid text-indigo-900"
-                : "hover:underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid"
+              ? "  underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid text-indigo-900"
+              : "hover:underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid"
               } `}
             href="#"
           >
@@ -31,8 +31,8 @@ export default function Header() {
             onClick={() => eventHandler(2)}
 
             className={`mx-28 hover:text-indigo-900 text-gray-300 ${useStyle === 2
-                ? "  underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid text-indigo-900"
-                : "hover:underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid"
+              ? "  underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid text-indigo-900"
+              : "hover:underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid"
               }`}
             href="#"
           >
