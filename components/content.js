@@ -4,8 +4,9 @@ import SideBar from "./sidebar";
 
 
 export default function Content({ category, neighborhood, restaurant }) {
-console.log(restaurant);
-const [data , setData] = useState( restaurant.data)
+const [data , setData] = useState( restaurant.data);
+
+
   return (
     <>
       <div className="grid grid-cols-4 container mx-auto pt-10">
