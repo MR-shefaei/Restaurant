@@ -3,8 +3,7 @@ import { useState } from "react";
 
 export default function Header() {
 
-
-  const [useStyle, setStyle] = useState(1);
+  const [useStyle, setStyle] = useState('/');
 
   function eventHandler(e) {
     setStyle(e);
@@ -16,8 +15,8 @@ export default function Header() {
       <div className="bg-[#FFFCFA] flex justify-center  p-8  font-semibold ">
         <Link href="/">
           <a
-            onClick={() => eventHandler(1)}
-            className={`mx-28  text-gray-300 ${useStyle === 1
+            onClick={() => eventHandler('/')}
+            className={`mx-28  text-gray-300 ${useStyle === '/'
               ? "  underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid text-indigo-900"
               : "hover:underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid"
               } `}
@@ -28,9 +27,9 @@ export default function Header() {
         </Link>
         <Link href="/about">
           <a
-            onClick={() => eventHandler(2)}
+            onClick={() => eventHandler('/about')}
 
-            className={`mx-28 hover:text-indigo-900 text-gray-300 ${useStyle === 2
+            className={`mx-28 hover:text-indigo-900 text-gray-300 ${useStyle === '/about'
               ? "  underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid text-indigo-900"
               : "hover:underline decoration-2 underline-offset-[38px] decoration-pink-300 decoration-solid"
               }`}

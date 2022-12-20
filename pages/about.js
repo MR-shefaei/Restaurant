@@ -1,11 +1,12 @@
 import React from "react";
-import AboutUs from "../components/aboutus";
+import Banner from "../components/baner";
 
 
 const About=()=>{
     return(
         <>
-            <AboutUs/>
+            <Banner/>
+
         </>
     );
 }

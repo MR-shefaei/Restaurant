@@ -4,11 +4,11 @@ import { API_URL } from "../config";
 
 const SideBar = ({ category, neighborhood, setData }) => {
   const choose = async (e) => {
-
+   
     const req = await fetch(`${API_URL}/api/restaurants?filters[categories][name][$eq]=${e}&populate=*`);
     const response = await req.json();
     setData(response.data)
-    console.log(response);
+
   }
 
 
